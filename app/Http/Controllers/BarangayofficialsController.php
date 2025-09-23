@@ -140,4 +140,9 @@ class BarangayofficialsController extends Controller
         return response()->json($resident);
     }
 
+    public function dashboard()
+    {
+        return view('barangay_official.dashboard');
+    }
+
 }

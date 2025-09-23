@@ -16,7 +16,7 @@ class BarangayServicesController extends Controller
 
     // Show the form to add a new barangay service
     public function brgyservices(){
-        return view("barangayservices"); // The view to add new service
+        return view("admin.barangayservices"); // The view to add new service
     }
 
     // Store a new barangay service

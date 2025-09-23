@@ -1058,8 +1058,9 @@
             <a href="#about">About</a>
             <a href="#products">Services</a>
             <a href="#more">Map</a>
-            <a href="#contact">Contact Us</a>
-            <a href="#tracking">Tracking Code</a>
+            <a href="#contact">Contact</a>
+            <a href="#tracking">Track Doc</a>
+            <a href="/login">Login</a>
         </nav>
     </header>
 

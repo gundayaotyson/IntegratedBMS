@@ -11,7 +11,7 @@ class DashboardController extends Controller
      public function index(){
 
 
-        return view('dashboard');
+        return view('admin.dashboard');
      }
      public function homepage(){
         $totalResidents = [
@@ -21,14 +21,13 @@ class DashboardController extends Controller
         ];
 
 
-        return view("home", $totalResidents);
+        return view("admin.home", $totalResidents);
 
 
      }
      public function Senior(){
-        return view("senior");
+        return view("admin.senior");
      }
 
 
 }
-

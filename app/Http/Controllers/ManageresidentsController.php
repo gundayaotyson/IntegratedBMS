@@ -16,7 +16,7 @@ class ManageresidentsController extends Controller
     public function index()
     {
         $residents = Resident::paginate(10);
-        return view('residents', compact('residents'));
+        return view('admin.residents', compact('residents'));
     }
 
     /**
@@ -24,7 +24,7 @@ class ManageresidentsController extends Controller
      */
     public function create()
     {
-        return view('residentslist');
+        return view('admin.residentslist');
     }
 
     /**
@@ -178,7 +178,7 @@ class ManageresidentsController extends Controller
 {
     // Eager load the 'resident' relationship
     $clearanceRequests = ClearanceReq::with('resident')->get();
-    return view('requestedclearance', compact('clearanceRequests'));
+    return view('admin.requestedclearance', compact('clearanceRequests'));
 }
 
 }

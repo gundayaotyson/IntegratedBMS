@@ -462,7 +462,7 @@
         @endif
         <div class="card-header">
             <h2 class="mb-0">Barangay Officials</h2>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addOfficialModal">
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addOfficialModal">
                 <i class="fas fa-plus me-1"></i> Add New Official
             </button>
         </div>

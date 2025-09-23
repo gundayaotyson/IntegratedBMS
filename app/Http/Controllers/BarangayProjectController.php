@@ -53,7 +53,7 @@ class BarangayProjectController extends Controller
                 ->get();
         }
 
-        return view('barangayprojects', compact(
+        return view('admin.barangayprojects', compact(
             'projects',
             'totalProjects',
             'ongoingProjects',
@@ -71,7 +71,7 @@ class BarangayProjectController extends Controller
     // Show create form
     public function create()
     {
-        return view('barangayprojects.create');
+        return view('admin.barangayprojects.create');
     }
 
     // Store new project
@@ -160,4 +160,3 @@ class BarangayProjectController extends Controller
         ]);
     }
 }
-

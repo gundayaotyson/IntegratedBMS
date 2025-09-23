@@ -13,12 +13,12 @@ class LegaldocumentsController extends Controller
     // Show Barangay Clearance Form
     public function BrgyClearance()
     {
-        return view("brgyclearance");
+        return view("admin.brgyclearance");
     }
     public function index()
     {
 
-        return view('brgyindigencyform');
+        return view('admin.brgyindigencyform');
     }
 
     // Store Barangay Clearance Request
@@ -81,13 +81,13 @@ class LegaldocumentsController extends Controller
     // Get all clearance requests with their associated residents
     $clearanceRequests = ClearanceReq::with('resident')->latest()->get();
 
-    return view('requesteddocument', compact('clearanceRequests'));
+    return view('admin.requesteddocument', compact('clearanceRequests'));
 }
 
     // View a single clearance request for validation
     public function clearancevalidate()
     {
-        return view('clearancevalidate');
+        return view('admin.clearancevalidate');
     }
 
   public function showClearance($id)
@@ -98,7 +98,7 @@ class LegaldocumentsController extends Controller
     // Debugging - uncomment to check data
     // dd($clearance);
 
-    return view('clearancevalidate', compact('clearance'));
+    return view('admin.clearancevalidate', compact('clearance'));
 }
 
     // Update clearance status and set date_released when released
@@ -145,7 +145,7 @@ public function clearanceRequested()
     // Correct: Fetch clearance requests with resident info
     $clearanceRequests = ClearanceReq::with('resident')->latest()->get();
 
-    return view('requestedclearance', compact('clearanceRequests'));
+    return view('admin.requestedclearance', compact('clearanceRequests'));
 }
 
 public function indigencyRequested()
@@ -158,7 +158,7 @@ public function indigencyRequested()
     // Fetch the clearance requests in a single query by using the 'IN' clause
     // $indigencyRequests = Resident::whereIn(DB::raw("CONCAT(Fname, ' ', lname)"), $fullNames)->get();
     // dd($indigencyRequests);
-    return view('requestedindigency', compact('indigencyRequests'));
+    return view('admin.requestedindigency', compact('indigencyRequests'));
 }
 public function showIndigency($id)
 {
@@ -167,7 +167,7 @@ public function showIndigency($id)
 
     // $indigency = ClearanceReq::findOrFail($id);
     // dd($indigency);
-    return view('brgyindigencyform', compact('indigency'));
+    return view('admin.brgyindigencyform', compact('indigency'));
 }
 
 

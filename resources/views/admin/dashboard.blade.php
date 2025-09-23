@@ -186,6 +186,7 @@
     border: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
+
 }
 
 .dropdown-item {
@@ -212,6 +213,10 @@
     width: 1.25em;
     text-align: center;
 }
+.profile-container .dropdown-menu {
+    transform: translate3d(-1px, 58.4px, 0px) !important;
+}
+
         /* Nested Dropdown */
         .dropdown-content {
             display: none;
@@ -326,7 +331,7 @@
                 </div>
             </button>
 
-            <div class="dropdown-menu dropdown-menu-end" style="min-width: 170px;">
+            <div class="dropdown-menu dropdown-menu-end" style="min-width: 170px; ">
                 <div class="dropdown-option">
                     <a href="{{ route('partials.profile')}}" class="dropdown-item d-flex align-items-center px-3 py-2 rounded">
                         <i class="fas fa-user-circle me-3"></i>

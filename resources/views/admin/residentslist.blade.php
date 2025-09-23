@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('admin.dashboard')
 
 @section('title', 'Add New Resident')
 

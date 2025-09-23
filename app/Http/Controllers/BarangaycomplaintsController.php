@@ -12,7 +12,7 @@ class BarangaycomplaintsController extends Controller
     public function index()
     {
         $complaints = BarangayComplaint::all();
-        return view('brgycomplaint', compact('complaints'));
+        return view('admin.brgycomplaint', compact('complaints'));
     }
 
     /**

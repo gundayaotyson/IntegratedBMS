@@ -11,7 +11,7 @@ class Resident extends Model
     protected $fillable = [
         'Fname', 'mname', 'lname', 'gender', 'birthday', 'birthplace',
         'age', 'civil_status', 'Citizenship', 'contact_number', 'occupation',
-        'household_no', 'purok_no', 'sitio','religion', 'image'
+        'household_no', 'purok_no', 'sitio','religion', 'image', 'email'
     ];
 
 

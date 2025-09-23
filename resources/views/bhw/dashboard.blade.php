@@ -86,32 +86,54 @@
             box-sizing: border-box;
         }
 
+        .dashboard-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-box h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .dashboard-box p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .login-link {
+            display: block;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .login-link:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
 <!-- Sidebar -->
 <div class="sidebar">
-    <h2>Dashboard</h2>
+    <h2>BHW Dashboard</h2>
     <ul>
         <li>
-            <a href="{{ route('sk.home') }}" class="{{ request()->routeIs('sk.home') ? 'active' : '' }}">
+            <a href="#" class="{{ request()->routeIs('home') ? 'active' : '' }}">
                 <i class="fas fa-home me-3"></i> Home
             </a>
         </li>
         <li>
             <a href="#" class="{{ request()->routeIs('profile') ? 'active' : '' }}">
                 <i class="fas fa-user me-3"></i> Profile
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('sk.projects') }}" class="{{ request()->routeIs('sk.projects') ? 'active' : '' }}">
-                <i class="fas fa-folder me-3"></i> Projects
-            </a>
-        </li>
-        <li>
-            <a href="{{ route('sk.services') }}" class="{{ request()->routeIs('sk.services') ? 'active' : '' }}">
-                <i class="fas fa-cogs me-3"></i> Services
             </a>
         </li>
         <li>
@@ -127,9 +149,17 @@
 
 <!-- Main Content -->
 <div class="main-content">
-   @yield('content')
+    <div class="dashboard-box">
+        <h1>Welcome to BHW Dashboard</h1>
+        @auth
+            <p>You are logged in as <strong>{{ Auth::user()->name }}</strong></p>
+            <p>Email: <strong>{{ Auth::user()->email }}</strong></p>
+        @else
+            <p>Please log in to access this dashboard.</p>
+            <a href="{{ route('login') }}" class="login-link">Login</a>
+        @endauth
+    </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
